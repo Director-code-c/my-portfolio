@@ -61,10 +61,6 @@ async function toggleDetail() {
             >
               Windows 下载
             </a>
-            <button v-else type="button" class="btn btn--disabled" disabled title="即将开放下载">
-              Windows 下载
-            </button>
-            <span v-if="!project.downloadUrl" class="download-note">即将开放下载</span>
           </div>
         </div>
       </div>
@@ -210,11 +206,6 @@ async function toggleDetail() {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.download-note {
-  font-size: 13px;
-  color: var(--color-text-muted);
 }
 
 /* 详情展开区 */
