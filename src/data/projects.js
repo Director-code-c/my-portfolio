@@ -6,7 +6,7 @@ export const projects = [
     name: '外文论文 AI 阅读器',
     version: 'v0.1.0',
     platform: 'Windows x64',
-    icon: '/ai-paper-reader.png',
+    icon: `${import.meta.env.BASE_URL}ai-paper-reader.png`,
     description: '轻量级 AI 辅助外文论文阅读工具，帮助完成阅读、翻译、总结与知识整理。',
     tags: ['PDF / TXT', '选区翻译', 'AI 总结', '单词本', '批注', '记录中心', 'Markdown 导出'],
     // 暂无正式下载地址，待接入 GitHub Releases 后替换为真实地址
