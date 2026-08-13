@@ -9,8 +9,9 @@ export const projects = [
     icon: `${import.meta.env.BASE_URL}ai-paper-reader.png`,
     description: '轻量级 AI 辅助外文论文阅读工具，帮助完成阅读、翻译、总结与知识整理。',
     tags: ['PDF / TXT', '选区翻译', 'AI 总结', '单词本', '批注', '记录中心', 'Markdown 导出'],
-    // 暂无正式下载地址，待接入 GitHub Releases 后替换为真实地址
-    downloadUrl: null,
+    // Windows 正式版安装包，托管于 GitHub Releases
+    downloadUrl:
+      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.1.0/AI-Paper-Reader-Setup-0.1.0.exe',
     capabilities: [
       'PDF / TXT 阅读',
       'PDF 文本选择',

@@ -57,7 +57,7 @@ async function toggleDetail() {
               class="btn btn--primary"
               :href="project.downloadUrl"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               Windows 下载
             </a>
