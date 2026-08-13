@@ -11,7 +11,7 @@ export const projects = [
     tags: ['PDF / TXT', '选区翻译', 'AI 总结', '单词本', '批注', '记录中心', 'Markdown 导出'],
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
-      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.1.1/AI-Paper-Reader-Setup-0.1.1.exe',
+      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.1.1/AI.Setup.0.1.1.exe',
     capabilities: [
       'PDF / TXT 阅读',
       'PDF 文本选择',
