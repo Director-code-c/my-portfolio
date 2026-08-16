@@ -4,15 +4,22 @@ export const projects = [
   {
     id: 'ai-paper-reader',
     name: '外文论文 AI 阅读器',
-    version: 'v0.3.0',
+    version: 'v0.4.0',
     platform: 'Windows x64',
     icon: `${import.meta.env.BASE_URL}ai-paper-reader.png`,
     description: '轻量级 AI 辅助外文论文阅读工具，帮助完成阅读、翻译、总结与知识整理。',
-    tags: ['PDF / TXT', '扫描 PDF OCR', '本地词典', 'AI 翻译', 'AI 总结', '单词本', '批注', '记录中心', 'Markdown 导出'],
+    tags: ['论文 AI 问答', '原文证据引用', 'PDF / TXT', '扫描 PDF OCR', '本地词典', 'AI 翻译', 'AI 总结', '单词本', '批注', '记录中心', 'Markdown 导出'],
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
-      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.3.0/AI-Paper-Reader-Setup-0.3.0.exe',
+      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.4.0/AI-Paper-Reader-Setup-0.4.0.exe',
     capabilities: [
+      '论文 AI 问答',
+      '基于论文原文证据回答',
+      '引用含原文摘录与页码',
+      '点击引用页码跳回 PDF',
+      '中文问题自动改写为英文检索词',
+      '支持“26题怎么做 / 这题怎么做”当前页题目问答',
+      '已 OCR 页面可参与问答',
       'StarDict 本地词典导入',
       '智能 / 本地词典 / AI 三种翻译模式',
       '划词优先本地词典查询',
@@ -38,6 +45,6 @@ export const projects = [
       '最近阅读',
       'Light / Dark / System 主题',
     ],
-    status: 'Windows v0.3.0 正式版',
+    status: 'Windows v0.4.0 正式版',
   },
 ]
