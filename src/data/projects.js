@@ -4,14 +4,14 @@ export const projects = [
   {
     id: 'ai-paper-reader',
     name: '外文论文 AI 阅读器',
-    version: 'v0.6.0',
+    version: 'v0.8.0',
     platform: 'Windows x64',
     icon: `${import.meta.env.BASE_URL}ai-paper-reader.png`,
     description: '轻量级 AI 辅助外文论文阅读工具，帮助完成阅读、翻译、总结与知识整理。',
-    tags: ['间隔重复', '单词本', '论文 AI 问答', '原文证据引用', 'PDF / TXT', '扫描 PDF OCR', '本地词典', 'AI 翻译', 'AI 总结', '批注', '记录中心', 'Markdown 导出'],
+    tags: ['间隔重复', '单词本', '论文 AI 问答', '多论文知识库', '跨论文 AI 问答', '原文证据引用', 'PDF / TXT', '扫描 PDF OCR', '本地词典', 'AI 翻译', 'AI 总结', '批注', '记录中心', 'Markdown 导出'],
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
-      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.6.0/AI-Paper-Reader-Setup-0.6.0.exe',
+      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.8.0/AI-Paper-Reader-Setup-0.8.0.exe',
     capabilities: [
       '学术词汇间隔重复（SM-2-lite）',
       '今日复习队列',
@@ -27,6 +27,16 @@ export const projects = [
       '引用含原文摘录与页码',
       '点击引用页码跳回 PDF',
       '中文问题自动改写为英文检索词',
+      '多论文持久化知识库',
+      '跨论文 AI 问答',
+      '指定多篇论文对比',
+      '多论文 citation + 页码跳转',
+      'Semantic Search',
+      'Embedding 语义索引',
+      '关键词 / 语义 / 混合三模式',
+      'RRF Hybrid Search',
+      'Hybrid RAG 跨论文问答',
+      '语义不可用自动降级关键词',
       '论文信息自动提取（标题 / 作者 / 年份 / 期刊）',
       'DOI 识别',
       'Crossref 在线补全',
@@ -57,6 +67,6 @@ export const projects = [
       '最近阅读',
       'Light / Dark / System 主题',
     ],
-    status: 'Windows v0.6.0 正式版',
+    status: 'Windows v0.8.0 正式版',
   },
 ]
