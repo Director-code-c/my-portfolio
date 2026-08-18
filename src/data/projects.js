@@ -4,15 +4,28 @@ export const projects = [
   {
     id: 'ai-paper-reader',
     name: '外文论文 AI 阅读器',
-    version: 'v0.8.0',
+    version: 'v0.9.0',
     platform: 'Windows x64',
     icon: `${import.meta.env.BASE_URL}ai-paper-reader.png`,
-    description: '轻量级 AI 辅助外文论文阅读工具，帮助完成阅读、翻译、总结与知识整理。',
-    tags: ['间隔重复', '单词本', '论文 AI 问答', '多论文知识库', '跨论文 AI 问答', '原文证据引用', 'PDF / TXT', '扫描 PDF OCR', '本地词典', 'AI 翻译', 'AI 总结', '批注', '记录中心', 'Markdown 导出'],
+    description:
+      '面向个人科研阅读的 AI Research Workspace：从论文阅读、知识库检索到项目级 RAG、研究笔记与证据回溯。',
+    tags: ['研究项目', '项目级 RAG', '跨论文 AI 问答', '研究笔记', '证据溯源', '单词本 SRS', '多论文知识库', 'Semantic Search', 'RRF Hybrid Search', 'PDF / TXT', '扫描 PDF OCR', 'StarDict 本地词典', 'AI 翻译', 'AI 总结', 'DOI / Crossref', 'BibTeX / APA / GB-T 7714'],
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
-      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.8.0/AI-Paper-Reader-Setup-0.8.0.exe',
+      'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.9.0/AI-Paper-Reader-Setup-0.9.0.exe',
     capabilities: [
+      'Research Projects 研究项目',
+      '一篇论文可属于多个项目',
+      '项目级 Keyword / Semantic / Hybrid RAG',
+      '项目范围跨论文 AI 问答',
+      '项目 scope 防越界',
+      '项目研究笔记',
+      'QA 回答一键加入项目笔记',
+      '笔记 citation 可回到原论文/页码',
+      '阅读状态：待读 / 阅读中 / 已读',
+      '星标论文',
+      '项目内筛选 + 搜索',
+      '多项目状态同步',
       '学术词汇间隔重复（SM-2-lite）',
       '今日复习队列',
       '忘记 / 困难 / 认识 / 熟练 四档复习',
@@ -67,6 +80,6 @@ export const projects = [
       '最近阅读',
       'Light / Dark / System 主题',
     ],
-    status: 'Windows v0.8.0 正式版',
+    status: 'Windows v0.9.0 正式版',
   },
 ]
