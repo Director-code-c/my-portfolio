@@ -61,6 +61,21 @@ async function toggleDetail() {
             >
               Windows 下载
             </a>
+
+            <p v-if="project.downloadNote" class="download-note">
+              <svg class="download-note__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M12 9v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              {{ project.downloadNote }}
+            </p>
           </div>
         </div>
       </div>
@@ -79,7 +94,31 @@ async function toggleDetail() {
       </div>
 
       <h4 class="detail__heading">主要能力</h4>
-      <ul class="detail__capabilities">
+      <div v-if="project.capabilityGroups?.length" class="detail__groups">
+        <section
+          v-for="group in project.capabilityGroups"
+          :key="group.title"
+          class="capability-group"
+        >
+          <h5 class="capability-group__title">{{ group.title }}</h5>
+          <ul class="capability-group__list">
+            <li v-for="item in group.items" :key="item" class="capability-group__item">
+              <svg class="check" viewBox="0 0 16 16" aria-hidden="true">
+                <path
+                  d="M3 8.5 6.2 12 13 4.5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              {{ item }}
+            </li>
+          </ul>
+        </section>
+      </div>
+      <ul v-else class="detail__capabilities">
         <li v-for="capability in project.capabilities" :key="capability">
           <svg class="check" viewBox="0 0 16 16" aria-hidden="true">
             <path
@@ -94,6 +133,14 @@ async function toggleDetail() {
           {{ capability }}
         </li>
       </ul>
+
+      <p v-if="project.localDataNote" class="detail__note">
+        <svg class="detail__note-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 16v-4M12 8h.01" />
+        </svg>
+        {{ project.localDataNote }}
+      </p>
 
       <div class="detail__status">
         <span class="detail__label">当前状态</span>
@@ -208,6 +255,25 @@ async function toggleDetail() {
   flex-wrap: wrap;
 }
 
+.download-note {
+  flex-basis: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  max-width: 100%;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.download-note__icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #b45309;
+}
+
 /* 详情展开区 */
 .project-card__detail {
   margin-top: 28px;
@@ -254,11 +320,70 @@ async function toggleDetail() {
   color: var(--color-text);
 }
 
+.detail__groups {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.capability-group {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.capability-group__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+
+.capability-group__list {
+  display: grid;
+  gap: 9px;
+}
+
+.capability-group__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text);
+}
+
+.capability-group__item .check {
+  margin-top: 3px;
+}
+
 .check {
   width: 16px;
   height: 16px;
   flex-shrink: 0;
   color: var(--color-accent);
+}
+
+.detail__note {
+  margin-top: 22px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.detail__note-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--color-primary);
 }
 
 .detail__status {
@@ -294,6 +419,10 @@ async function toggleDetail() {
   }
 
   .detail__capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .detail__groups {
     grid-template-columns: 1fr;
   }
 }
