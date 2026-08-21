@@ -13,8 +13,6 @@ export const projects = [
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
       'https://github.com/Director-code-c/ai-paper-reader-releases/releases/download/v0.11.0/AI.Setup.0.11.0.exe',
-    downloadNote:
-      'Windows 安装包暂未数字签名，可能出现“未知发布者”或 SmartScreen 提示。v0.11.0 不会自动显示旧版本的本地数据，升级前请先备份。',
     capabilityGroups: [
       {
         title: '论文阅读与学习',

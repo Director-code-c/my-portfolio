@@ -61,21 +61,6 @@ async function toggleDetail() {
             >
               Windows 下载
             </a>
-
-            <p v-if="project.downloadNote" class="download-note">
-              <svg class="download-note__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path
-                  d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path d="M12 9v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                <path d="M12 17h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              </svg>
-              {{ project.downloadNote }}
-            </p>
           </div>
         </div>
       </div>
@@ -253,25 +238,6 @@ async function toggleDetail() {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.download-note {
-  flex-basis: 100%;
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  max-width: 100%;
-  font-size: 12px;
-  line-height: 1.55;
-  color: var(--color-text-muted);
-}
-
-.download-note__icon {
-  width: 14px;
-  height: 14px;
-  flex-shrink: 0;
-  margin-top: 2px;
-  color: #b45309;
 }
 
 /* 详情展开区 */
