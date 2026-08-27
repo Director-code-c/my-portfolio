@@ -36,8 +36,8 @@ async function toggleDetail() {
         <h3 class="project-card__name">{{ project.name }}</h3>
 
         <div class="project-card__meta">
-          <span class="badge">版本 {{ project.version }}</span>
-          <span class="badge badge--quiet">平台 {{ project.platform }}</span>
+          <span v-if="project.version" class="badge">版本 {{ project.version }}</span>
+          <span v-if="project.platform" class="badge badge--quiet">平台 {{ project.platform }}</span>
         </div>
 
         <p class="project-card__description">{{ project.description }}</p>
@@ -50,6 +50,16 @@ async function toggleDetail() {
           <button type="button" class="btn btn--secondary" @click="toggleDetail">
             {{ expanded ? '收起详情' : '查看详情' }}
           </button>
+
+          <a
+            v-if="project.liveUrl"
+            class="btn btn--primary"
+            :href="project.liveUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            在线体验
+          </a>
 
           <div class="project-card__download">
             <a
@@ -68,13 +78,13 @@ async function toggleDetail() {
 
     <div v-if="expanded" ref="detailRef" class="project-card__detail">
       <div class="detail__grid">
-        <div>
+        <div v-if="project.version">
           <span class="detail__label">版本</span>
           <span class="detail__value">{{ project.version }}</span>
         </div>
-        <div>
+        <div v-if="project.platform">
           <span class="detail__label">平台</span>
-          <span class="detail__value">Windows</span>
+          <span class="detail__value">{{ project.platform }}</span>
         </div>
       </div>
 

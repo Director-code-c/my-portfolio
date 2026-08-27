@@ -82,4 +82,27 @@ export const projects = [
       '论文、笔记、原文证据和知识结构均保存在本地。AI 功能仅在用户主动调用时使用已配置的 AI 服务。',
     status: 'Windows v0.11.0 正式版',
   },
+  {
+    id: 'studydock',
+    name: 'StudyDock',
+    icon: `${import.meta.env.BASE_URL}studydock.svg`,
+    description:
+      'StudyDock 是一个个人学习工作台，现已支持邮箱认证、个人资料以及课程创建、编辑、归档和删除，并通过 Supabase RLS 隔离用户数据。',
+    tags: ['Web 应用', 'Next.js + Supabase', 'Tailwind CSS', '邮箱认证', '课程管理'],
+    // 线上体验地址，托管于 Vercel
+    liveUrl: 'https://studydock-two.vercel.app',
+    platform: 'Web 应用',
+    capabilityGroups: [
+      {
+        title: '核心功能',
+        items: [
+          '邮箱认证与个人资料管理',
+          '课程创建、编辑、归档与删除',
+          '服务端路由保护与安全认证回调',
+          'Supabase RLS 用户数据隔离',
+        ],
+      },
+    ],
+    status: '已上线',
+  },
 ]
