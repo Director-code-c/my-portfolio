@@ -85,24 +85,32 @@ export const projects = [
   {
     id: 'studydock',
     name: 'StudyDock',
+    version: 'v0.2.0',
+    platform: 'Web · Windows x64',
     icon: `${import.meta.env.BASE_URL}studydock.svg`,
     description:
-      'StudyDock 是一个个人学习工作台，现已支持邮箱认证、个人资料以及课程创建、编辑、归档和删除，并通过 Supabase RLS 隔离用户数据。',
-    tags: ['Web 应用', 'Next.js + Supabase', 'Tailwind CSS', '邮箱认证', '课程管理'],
+      '面向学习管理的桌面工作台，支持课程与项目管理，Dashboard 展示真实课程数据，所有数据通过 Supabase RLS 隔离。',
+    tags: ['Web 应用', 'Next.js + Supabase', 'Tailwind CSS', '邮箱认证', '课程管理', '项目管理', 'Windows 桌面版'],
     // 线上体验地址，托管于 Vercel
     liveUrl: 'https://studydock-two.vercel.app',
-    platform: 'Web 应用',
+    // Windows 正式版安装包，托管于 GitHub Releases
+    downloadUrl:
+      'https://github.com/Director-code-c/studydock/releases/download/v0.2.0/StudyDock_0.2.0_x64-setup.exe',
     capabilityGroups: [
       {
         title: '核心功能',
         items: [
           '邮箱认证与个人资料管理',
           '课程创建、编辑、归档与删除',
+          'Dashboard 展示真实课程数据',
+          '项目创建、编辑与删除',
+          '项目可选关联课程',
+          '项目状态与截止日期管理',
           '服务端路由保护与安全认证回调',
           'Supabase RLS 用户数据隔离',
         ],
       },
     ],
-    status: '已上线',
+    status: 'Windows v0.2.0 正式版',
   },
 ]

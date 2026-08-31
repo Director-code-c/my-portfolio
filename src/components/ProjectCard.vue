@@ -69,7 +69,7 @@ async function toggleDetail() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Windows 下载
+              下载 Windows 版
             </a>
           </div>
         </div>
