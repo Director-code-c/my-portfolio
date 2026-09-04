@@ -85,17 +85,17 @@ export const projects = [
   {
     id: 'studydock',
     name: 'StudyDock',
-    version: 'v0.3.0',
+    version: 'v0.4.0',
     platform: 'Web · Windows x64',
     icon: `${import.meta.env.BASE_URL}studydock.svg`,
     description:
-      '面向学习管理的桌面工作台，支持课程、项目、截止日期与学习文件管理。',
-    tags: ['Web 应用', 'Next.js + Supabase', 'Tailwind CSS', '邮箱认证', '课程管理', '项目管理', '文件上传', 'Windows 桌面版'],
+      '面向学习管理的桌面工作台，支持课程、项目、文件库、全局搜索与回收站管理。',
+    tags: ['Web 应用', 'Next.js + Supabase', 'Tailwind CSS', '邮箱认证', '课程管理', '项目管理', '文件管理', '全局搜索', '回收站', 'Windows 桌面版'],
     // 线上体验地址，托管于 Vercel
     liveUrl: 'https://studydock-two.vercel.app',
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
-      'https://github.com/Director-code-c/studydock/releases/download/v0.3.0/StudyDock_0.3.0_x64-setup.exe',
+      'https://github.com/Director-code-c/studydock/releases/download/v0.4.0/StudyDock_0.4.0_x64-setup.exe',
     capabilityGroups: [
       {
         title: '核心功能',
@@ -104,12 +104,14 @@ export const projects = [
           '课程创建、编辑、归档与删除',
           '项目管理与课程文件关联',
           'Dashboard 截止日期与最近项目',
+          'Dashboard 最近文件',
           '文件库与文件上传（单文件最大 50 MB）',
-          '文件可选关联课程或项目',
+          '文件下载与全局搜索',
+          '文件回收站、恢复与永久删除',
           'Supabase RLS 用户数据隔离',
         ],
       },
     ],
-    status: 'Windows v0.3.0 正式版',
+    status: 'Windows v0.4.0 正式版',
   },
 ]
