@@ -85,33 +85,59 @@ export const projects = [
   {
     id: 'studydock',
     name: 'StudyDock',
-    version: 'v0.4.0',
+    version: 'v0.5.0',
     platform: 'Web · Windows x64',
     icon: `${import.meta.env.BASE_URL}studydock.svg`,
     description:
-      '面向学习管理的桌面工作台，支持课程、项目、文件库、全局搜索与回收站管理。',
-    tags: ['Web 应用', 'Next.js + Supabase', 'Tailwind CSS', '邮箱认证', '课程管理', '项目管理', '文件管理', '全局搜索', '回收站', 'Windows 桌面版'],
-    // 线上体验地址，托管于 Vercel
-    liveUrl: 'https://studydock-two.vercel.app',
+      '面向学习管理的桌面工作台，支持课程、项目、文件库、全局搜索与回收站管理。文件可重命名、预览、按文件夹整理与批量操作，并支持离线查看最近同步的课程。',
+    tags: ['Web 应用', 'Next.js + Supabase', 'Tailwind CSS', '邮箱认证', '课程管理', '项目管理', '文件管理', '文件夹整理', '批量操作', '全局搜索', '回收站', '文件预览', '离线可用', 'Windows 桌面版'],
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
-      'https://github.com/Director-code-c/studydock/releases/download/v0.4.0/StudyDock_0.4.0_x64-setup.exe',
+      'https://github.com/Director-code-c/studydock/releases/download/v0.5.0/StudyDock_0.5.0_x64-setup.exe',
     capabilityGroups: [
       {
-        title: '核心功能',
+        title: '课程与项目',
         items: [
           '邮箱认证与个人资料管理',
           '课程创建、编辑、归档与删除',
           '项目管理与课程文件关联',
+          '项目状态跟踪（待办 / 进行中 / 已完成）',
           'Dashboard 截止日期与最近项目',
-          'Dashboard 最近文件',
+        ],
+      },
+      {
+        title: '文件管理',
+        items: [
           '文件库与文件上传（单文件最大 50 MB）',
+          '多级文件夹整理（最多 5 层）',
+          '文件夹移动与重命名',
+          '文件重命名（不影响已存内容）',
+          '图片与 PDF 在线预览',
           '文件下载与全局搜索',
+          '批量移到回收站、批量移动与批量恢复',
+          'Dashboard 最近文件',
+        ],
+      },
+      {
+        title: '回收站与离线',
+        items: [
           '文件回收站、恢复与永久删除',
+          '一键清空回收站',
+          '删除时间显示（今天 / 昨天 / N 天前）',
+          '离线状态提示与恢复网络重试',
+          '离线查看最近同步的课程列表',
+        ],
+      },
+      {
+        title: '数据安全',
+        items: [
           'Supabase RLS 用户数据隔离',
+          '列级权限控制（最小权限模型）',
+          '私有存储桶与签名下载链接',
+          '上传服务端二次校验',
         ],
       },
     ],
-    status: 'Windows v0.4.0 正式版',
+    status: 'Windows v0.5.0 正式版',
   },
 ]
