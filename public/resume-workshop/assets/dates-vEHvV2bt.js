@@ -1,0 +1,1 @@
+function e(e,t=`zh`){return e.present?t===`zh`?`至今`:`Present`:e.year==null?``:e.month==null?`${e.year}`:`${e.year}.${String(e.month).padStart(2,`0`)}`}function t(t,n=`zh`){let r=e(t.start,n),i=e(t.end,n);return!r&&!i?``:`${r||`？`} – ${i||`？`}`}function n(e){return e.present?1/0:e.year==null?NaN:e.year*100+(e.month??0)}export{e as n,t as r,n as t};
