@@ -4,7 +4,7 @@
 const resumeWorkshop = {
     id: 'resume-workshop',
     name: '简历工坊',
-    version: 'v0.1.0',
+    version: 'v0.1.1',
     platform: 'Web · Windows x64',
     icon: `${import.meta.env.BASE_URL}resume-workshop-icon.png`,
     description:
@@ -27,7 +27,7 @@ const resumeWorkshop = {
     liveUrl: 'https://director-code-c.github.io/my-portfolio/resume-workshop/',
     // Windows 正式版安装包，托管于 GitHub Releases
     downloadUrl:
-      'https://github.com/Director-code-c/resume-workshop-releases/releases/download/v0.1.0/Resume-Workshop-0.1.0-win-x64-Setup.exe',
+      'https://github.com/Director-code-c/resume-workshop-releases/releases/download/v0.1.1/Resume-Workshop-0.1.1-win-x64-Setup.exe',
     capabilityGroups: [
       {
         title: '简历编辑与排版',
@@ -77,7 +77,7 @@ const resumeWorkshop = {
     ],
     localDataNote:
       '网页版数据只保存在访客自己的浏览器中；桌面版数据保存在本机应用内，两者相互独立，可用「设置 → 备份」导出 JSON 互相迁移。',
-    status: 'Windows v0.1.0 正式版',
+    status: 'Windows v0.1.1 正式版',
   }
 
 export const projects = [
