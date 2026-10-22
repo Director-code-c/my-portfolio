@@ -1,11 +1,11 @@
 // 作品数据：以后新增作品时，向数组末尾追加一个对象即可。
 
-export const projects = [
-  {
+// 作品展示顺序：知研 AI → 简历工坊 → StudyDock → 留白
+const resumeWorkshop = {
     id: 'resume-workshop',
     name: '简历工坊',
     version: 'v0.1.0',
-    platform: 'Web 在线体验',
+    platform: 'Web · Windows x64',
     icon: `${import.meta.env.BASE_URL}resume-workshop-icon.png`,
     description:
       '把真实经历整理成可正式投递的简历：素材库与简历数据分离，测量式分页预览做到打印即所见，另有求职看板与单文件个人网站导出。所有数据只保存在自己的浏览器里。',
@@ -25,6 +25,9 @@ export const projects = [
       '撤销重做',
     ],
     liveUrl: 'https://director-code-c.github.io/my-portfolio/resume-workshop/',
+    // Windows 正式版安装包，托管于 GitHub Releases
+    downloadUrl:
+      'https://github.com/Director-code-c/resume-workshop-releases/releases/download/v0.1.0/Resume-Workshop-0.1.0-win-x64-Setup.exe',
     capabilityGroups: [
       {
         title: '简历编辑与排版',
@@ -73,9 +76,11 @@ export const projects = [
       },
     ],
     localDataNote:
-      '在线体验版的数据只保存在访客自己的浏览器中，与作者本机数据完全隔离；首次打开可在「我的简历」页载入示例简历快速浏览。',
-    status: 'Web 在线体验版',
-  },
+      '网页版数据只保存在访客自己的浏览器中；桌面版数据保存在本机应用内，两者相互独立，可用「设置 → 备份」导出 JSON 互相迁移。',
+    status: 'Windows v0.1.0 正式版',
+  }
+
+export const projects = [
   {
     id: 'ai-paper-reader',
     name: '知研 AI（外文论文 AI 阅读器）',
@@ -157,6 +162,7 @@ export const projects = [
       '论文、笔记、原文证据和知识结构均保存在本地。AI 功能仅在用户主动调用时使用已配置的 AI 服务。',
     status: 'Windows v0.11.0 正式版',
   },
+  resumeWorkshop,
   {
     id: 'studydock',
     name: 'StudyDock',
